@@ -1,4 +1,4 @@
-import { buildKRWQSentinelAgent } from "../index.js";
+import { buildKRWQSentinelAgent } from "./index.js";
 
 /**
  * Test script for KRWQ Sentinel
