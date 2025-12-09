@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Trophy, Award, TrendingUp, Target } from 'lucide-react';
+import { API_URL } from '../config';
 
 interface LeaderboardEntry {
   userId: string;
@@ -24,7 +25,7 @@ export default function Leaderboard() {
 
   const fetchLeaderboard = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/leaderboard?limit=5');
+      const response = await axios.get(`${API_URL}/api/leaderboard?limit=5`);
       setLeaderboard(response.data.leaderboard);
       setLoading(false);
     } catch (error) {

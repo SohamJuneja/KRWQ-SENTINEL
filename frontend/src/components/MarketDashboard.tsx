@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { DollarSign, Activity, Zap } from 'lucide-react';
+import { API_URL } from '../config';
 
 interface Prices {
   krwqPrice: number;
@@ -30,8 +31,8 @@ export default function MarketDashboard() {
   const fetchData = async () => {
     try {
       const [pricesRes, statsRes] = await Promise.all([
-        axios.get('http://localhost:3001/api/market/prices'),
-        axios.get('http://localhost:3001/api/market/stats'),
+        axios.get(`${API_URL}/api/market/prices`),
+        axios.get(`${API_URL}/api/market/stats`),
       ]);
       setPrices(pricesRes.data.prices);
       setStats(statsRes.data.stats);
@@ -142,7 +143,7 @@ export default function MarketDashboard() {
         <button
           onClick={async () => {
             try {
-              await axios.post('http://localhost:3001/api/market/demo-trade');
+              await axios.post(`${API_URL}/api/market/demo-trade`);
               setTimeout(() => window.location.reload(), 2500);
             } catch (error) {
               console.error('Error:', error);

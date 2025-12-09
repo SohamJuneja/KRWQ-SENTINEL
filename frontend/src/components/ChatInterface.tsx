@@ -4,6 +4,7 @@ import { Send, Bot, User, TrendingUp, AlertCircle, CheckCircle, BarChart3, Messa
 import Dashboard from './Dashboard';
 import MarketDashboard from './MarketDashboard';
 import Leaderboard from './Leaderboard';
+import { API_URL } from '../config';
 
 interface Message {
   id: string;
@@ -66,7 +67,7 @@ Let's find alpha together! 🚀`,
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3001/api/submit-tip', {
+      const response = await axios.post(`${API_URL}/api/submit-tip`, {
         tip: input,
         userId: 'demo_user'
       });

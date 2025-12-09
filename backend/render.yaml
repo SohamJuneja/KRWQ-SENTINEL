@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: krwq-sentinel-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: GOOGLE_API_KEY
+        sync: false

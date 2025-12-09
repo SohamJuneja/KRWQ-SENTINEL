@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { TrendingUp, Award, CheckCircle, XCircle, BarChart3 } from 'lucide-react';
+import { API_URL } from '../config';
 
 interface Stats {
   totalTips: number;
@@ -21,7 +22,7 @@ export default function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/tips/stats');
+      const response = await axios.get(`${API_URL}/api/tips/stats`);
       setStats(response.data.stats);
     } catch (error) {
       console.error('Error fetching stats:', error);
