@@ -31,7 +31,7 @@
    - Connect GitHub: `SohamJuneja/KRWQ-SENTINEL`
    - **Root Directory:** `backend`
    - **Environment:** Node
-   - **Build Command:** `npm install`
+   - **Build Command:** `npm install && npm run build`
    - **Start Command:** `npm start`
 
 2. **Add Environment Variables:**
