@@ -7,7 +7,7 @@ import { LlmAgent } from "@iqai/adk";
 export const commissionCalculatorAgent = new LlmAgent({
   name: "commission_calculator_agent",
   description: "Calculates commission rewards for successful intelligence providers",
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-2.0-flash",
   
   instruction: `You are the commission calculator for KRWQ Sentinel.
 

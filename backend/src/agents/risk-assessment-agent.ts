@@ -7,7 +7,7 @@ import { LlmAgent } from "@iqai/adk";
 export const riskAssessmentAgent = new LlmAgent({
   name: "risk_assessment_agent",
   description: "Assesses risk levels for proposed trading strategies",
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-2.0-flash",
   
   instruction: `You are a risk management specialist for the KRWQ Sentinel fund.
 

@@ -29,7 +29,7 @@ function shouldHardcodeSuccess(tip: string): boolean {
 export const intelVerificationAgent = new LlmAgent({
   name: "intel_verification_agent",
   description: "Verifies market intelligence and news tips using web search",
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-2.0-flash",
   
   instruction: `You are an intelligence verification specialist for the KRWQ Sentinel hedge fund.
 
