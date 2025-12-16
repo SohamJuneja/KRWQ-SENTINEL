@@ -11,7 +11,7 @@ dotenv.config();
  */
 export async function buildKRWQSentinelAgent() {
   const { runner, agent, session } = await AgentBuilder.create("krwq_sentinel")
-    .withModel("gemini-2.0-flash")
+    .withModel("gpt-4o-mini")
     .withAgent(coordinatorAgent)
     .withDescription("KRWQ Sentinel - The world's first community-powered DeFAI hedge fund")
     .build();

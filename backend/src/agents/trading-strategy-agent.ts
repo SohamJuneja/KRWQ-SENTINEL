@@ -7,7 +7,7 @@ import { LlmAgent } from "@iqai/adk";
 export const tradingStrategyAgent = new LlmAgent({
   name: "trading_strategy_agent",
   description: "Analyzes market intelligence and creates trading strategies for KRWQ-FRAX arbitrage",
-  model: "gemini-2.0-flash",
+  model: "gpt-4o-mini",
   
   instruction: `You are a DeFi trading strategist for KRWQ-FRAX arbitrage opportunities.
 
